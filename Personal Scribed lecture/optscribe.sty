@@ -1,0 +1,41 @@
+%% optscribe.sty v20151116
+%% (c) 2015 Purushottam Kar (Indian Institute of Technology Kanpur)
+%% 
+%% Draws upon style elements from 
+%% the style file for the course CS289 by Alexander Sherstov
+%% the class file for the publication NOW FnT(R)-ML by Neal Parikh
+%% the style file for the proceedings of the NIPS 2015 conference
+
+\usepackage{opt}
+
+% The big fancy header
+\newcommand{\makeheader}[4]{
+	\setcounter{optseries}{#1}
+	\noindent
+	\parbox{0.75\textwidth}{
+		{\sffamily\bfseries Indian Institute of Technology Kanpur}\\
+		{\sffamily\bfseries CS774 Optimization Techniques}\\
+		\rule{0mm}{6mm}%
+		{\it Scribe:}	{#3}\\
+		{\it Instructor:} {Purushottam Kar}\\
+		{\it Date:}   {#2}
+	}
+\hfill
+\begin{tabular}{c@{}}
+{\sffamily\bfseries\Large LECTURE}\\
+\rule{0mm}{20mm}\scalebox{6.6}{\sffamily\theoptseries}
+\end{tabular}
+
+\def\toptitlebar{\hrule height1pt\vskip .25in\vskip-\parskip}
+\def\bottomtitlebar{\vskip .29in\vskip-\parskip\hrule height1pt\vskip.09in}
+
+\vbox{
+	\hsize\textwidth\linewidth\hsize
+	\vskip 0.1in
+	\toptitlebar
+	\centering
+	{\Large\bfseries\sffamily\boldmath #4\par}
+	\bottomtitlebar
+	\vskip 0.1in
+}
+}
